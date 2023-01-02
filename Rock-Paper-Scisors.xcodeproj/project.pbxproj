@@ -7,19 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B734CEDC28FD7EFE00DE8D8F /* GameModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B734CEDB28FD7EFE00DE8D8F /* GameModule.swift */; };
+		B734CEDE28FD845100DE8D8F /* DesignsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B734CEDD28FD845100DE8D8F /* DesignsModule.swift */; };
+		B7B144AD28FD460300703330 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B144AC28FD460300703330 /* MainViewController.swift */; };
+		B7B144AF28FD4F7700703330 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B144AE28FD4F7700703330 /* ResultViewController.swift */; };
+		B7B14C8D28FE728900FFF922 /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B14C8C28FE728900FFF922 /* RulesViewController.swift */; };
 		B7EAC4B928FAB95B00345B08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EAC4B828FAB95B00345B08 /* AppDelegate.swift */; };
 		B7EAC4BB28FAB95B00345B08 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EAC4BA28FAB95B00345B08 /* SceneDelegate.swift */; };
-		B7EAC4BD28FAB95B00345B08 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EAC4BC28FAB95B00345B08 /* ViewController.swift */; };
 		B7EAC4C028FAB95B00345B08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7EAC4BE28FAB95B00345B08 /* Main.storyboard */; };
 		B7EAC4C228FAB95C00345B08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7EAC4C128FAB95C00345B08 /* Assets.xcassets */; };
 		B7EAC4C528FAB95C00345B08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7EAC4C328FAB95C00345B08 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B734CEDB28FD7EFE00DE8D8F /* GameModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModule.swift; sourceTree = "<group>"; };
+		B734CEDD28FD845100DE8D8F /* DesignsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignsModule.swift; sourceTree = "<group>"; };
+		B7B144AC28FD460300703330 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B7B144AE28FD4F7700703330 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		B7B14C8C28FE728900FFF922 /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
 		B7EAC4B528FAB95B00345B08 /* Rock-Paper-Scisors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rock-Paper-Scisors.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7EAC4B828FAB95B00345B08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7EAC4BA28FAB95B00345B08 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B7EAC4BC28FAB95B00345B08 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B7EAC4BF28FAB95B00345B08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B7EAC4C128FAB95C00345B08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7EAC4C428FAB95C00345B08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +45,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B72765B128FD4333006A7C4B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B7B144AC28FD460300703330 /* MainViewController.swift */,
+				B7B144AE28FD4F7700703330 /* ResultViewController.swift */,
+				B7B14C8C28FE728900FFF922 /* RulesViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B7DE906228FD2A8200D82A0A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B7DE906428FD2A9400D82A0A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B734CEDB28FD7EFE00DE8D8F /* GameModule.swift */,
+				B734CEDD28FD845100DE8D8F /* DesignsModule.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		B7EAC4AC28FAB95B00345B08 = {
 			isa = PBXGroup;
 			children = (
@@ -56,9 +90,11 @@
 		B7EAC4B728FAB95B00345B08 /* Rock-Paper-Scisors */ = {
 			isa = PBXGroup;
 			children = (
+				B7DE906428FD2A9400D82A0A /* Model */,
+				B7DE906228FD2A8200D82A0A /* View */,
 				B7EAC4B828FAB95B00345B08 /* AppDelegate.swift */,
 				B7EAC4BA28FAB95B00345B08 /* SceneDelegate.swift */,
-				B7EAC4BC28FAB95B00345B08 /* ViewController.swift */,
+				B72765B128FD4333006A7C4B /* Controller */,
 				B7EAC4BE28FAB95B00345B08 /* Main.storyboard */,
 				B7EAC4C128FAB95C00345B08 /* Assets.xcassets */,
 				B7EAC4C328FAB95C00345B08 /* LaunchScreen.storyboard */,
@@ -138,9 +174,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7EAC4BD28FAB95B00345B08 /* ViewController.swift in Sources */,
+				B7B14C8D28FE728900FFF922 /* RulesViewController.swift in Sources */,
+				B7B144AD28FD460300703330 /* MainViewController.swift in Sources */,
+				B734CEDE28FD845100DE8D8F /* DesignsModule.swift in Sources */,
 				B7EAC4B928FAB95B00345B08 /* AppDelegate.swift in Sources */,
 				B7EAC4BB28FAB95B00345B08 /* SceneDelegate.swift in Sources */,
+				B734CEDC28FD7EFE00DE8D8F /* GameModule.swift in Sources */,
+				B7B144AF28FD4F7700703330 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
