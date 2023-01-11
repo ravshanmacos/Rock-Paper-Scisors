@@ -14,7 +14,7 @@ protocol Game:AnyObject{
 class GameModule{
     
     var chosen:String = "paper"
-    var score = 0;
+   
     
     func setChoice( _ choice:String){
         self.chosen = choice
@@ -24,50 +24,28 @@ class GameModule{
         return chosen;
     }
     
-    func win(_ me:String, _ machine:String)->String{
+    func calculateResult(_ me:String, _ machine:String)->Bool?{
         if me == machine{
-            return "DRAW"
+            return nil
         }else if me == "paper" && machine == "rock" || me == "rock" && machine == "paper"{
             if me == "paper"{
-                score += 1;
-                return "YOU WIN"
-                
+                return true
             }
-                return "YOU LOSE"
+                return false
             
         }else if me == "paper" && machine == "scissors" || me == "scissors" && machine == "paper"{
             if machine == "scissors"{
-                return "YOU LOSE"
+                return false
             }
-            score += 1;
-            return "YOU WIN"
+            return true
         }else if me == "rock" && machine == "scissors" || me == "scissors" && machine == "rock"{
             if machine == "rock"{
-                return "YOU LOSE"
+                return false
             }
-            score += 1;
-            return "YOU WIN"
+            return true
         }
         
-        return ""
-    }
-    
-    
-    func getScore() -> String{
-        return "\(score)"
+        return false
     }
     
 }
-
-/**
- paper beat rock
- rock beat scissor
- scissor beat paper
- 
- func calculate(){
- 
- el1, el2
- 
- }
- 
- */

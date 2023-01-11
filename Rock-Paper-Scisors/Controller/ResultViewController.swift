@@ -55,17 +55,22 @@ class ResultViewController: UIViewController {
     private func resultUI(_ houseChosen:String){
         Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) { [self] timer in
             changeUI(with: houseChosen)
-            if gameModule.win(chosen, houseChosen) == "YOU WIN"{
+            guard let isWon = gameModule.calculateResult(chosen, houseChosen) else{
+                self.playAgainButton.titleLabel?.text = "Play Again 😶"
+                resultLabel.text = "DRAW"
+                return
+            }
+            if isWon{
                 playAgainButton.titleLabel?.text = "Play Again 😀"
+                resultLabel.text = "YOU WIN"
                 score += 1
                 self.scoreLabel.text = "\(score)"
                 userDefaults.set(score, forKey: "score")
                 delegate?.updateScore()
                 
-           }else if self.gameModule.win(chosen, houseChosen) == "DRAW"{
-            self.playAgainButton.titleLabel?.text = "Play Again 😶"
            }else{
                self.playAgainButton.titleLabel?.text = "Play Again 😞"
+               resultLabel.text = "YOU LOSE"
            }
             
         }
@@ -75,7 +80,6 @@ class ResultViewController: UIViewController {
         houseButton.setImage(UIImage(named: "icon-\(houseChosen)"), for: .normal)
         houseButton.isHidden = false;
         emptyButton.isHidden = true;
-        resultLabel.text = self.gameModule.win(chosen, houseChosen)
         resultLabel.isHidden = false;
     }
     
