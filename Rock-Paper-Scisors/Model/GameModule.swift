@@ -7,11 +7,16 @@
 
 import Foundation
 
-struct GameModule{
+protocol Game:AnyObject{
+    func updateScore()
+}
+
+class GameModule{
+    
     var chosen:String = "paper"
     var score = 0;
     
-    mutating func setChoice( _ choice:String){
+    func setChoice( _ choice:String){
         self.chosen = choice
     }
     
@@ -19,7 +24,7 @@ struct GameModule{
         return chosen;
     }
     
-    mutating func win(_ me:String, _ machine:String)->String{
+    func win(_ me:String, _ machine:String)->String{
         if me == machine{
             return "DRAW"
         }else if me == "paper" && machine == "rock" || me == "rock" && machine == "paper"{

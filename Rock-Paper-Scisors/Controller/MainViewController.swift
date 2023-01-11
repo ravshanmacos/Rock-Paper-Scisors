@@ -7,8 +7,8 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
-
+class MainViewController: UIViewController, Game {
+   
    //MARK: - Outlets
     
     @IBOutlet weak var scoreView: UIView!
@@ -17,13 +17,14 @@ class MainViewController: UIViewController {
     @IBOutlet weak var resultView: UILabel!
     var designsModule = DesignsModule()
     var gameModule = GameModule()
-    
+    var userDefaults = UserDefaults.standard
     override func viewDidLoad() {
         super.viewDidLoad()
+        userDefaults.set(0, forKey: "score")
         designsModule.shapeView(from: scoreView,borderWidth: 0, cornerRadius: 5)
         designsModule.shapeView(from: topBarView, borderWidth: 1, cornerRadius: 5)
         designsModule.shapeView(from: RulesButton, borderWidth: 1, cornerRadius: 5)
-        resultView.text = String(gameModule.getScore())
+        
     }
     
     //MARK: - IBActions Functions
@@ -37,6 +38,10 @@ class MainViewController: UIViewController {
         
         }
     
+    func updateScore() {
+        resultView.text = String(userDefaults.integer(forKey: "score"))
+    }
+    
     
 }
 
@@ -46,6 +51,7 @@ extension MainViewController{
         if segue.identifier == "mainToPlay"{
             let destinationVC =  segue.destination as! ResultViewController
             destinationVC.chosen = gameModule.getChosen()
+            destinationVC.delegate = self
         }
     }
 }
