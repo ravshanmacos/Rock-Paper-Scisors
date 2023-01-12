@@ -11,11 +11,12 @@ import UIKit
 struct DesignsModule{
     
     func shapeView(from el:UIView,borderWidth:Int,cornerRadius:Int){
+        //change UIView corner radius, border width and border color
         el.layer.cornerRadius = CGFloat(cornerRadius);
         el.layer.borderWidth = CGFloat(borderWidth)
         el.layer.borderColor = UIColor.white.cgColor
     }
-    
+    // change button's image logic
     func setChosen(_ meButton:UIButton,_ chosen:String){
         switch chosen{
         case "paper":
