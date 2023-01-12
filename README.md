@@ -13,5 +13,7 @@ chalenging because of dynamically changing 3 buttons according to user selection
 
 ### Logic Part
 
-First of all, in the main view controller I created IBOutlets of UI Buttons
- 
+First of all, in the main view controller I created IBOutlets of UI Buttons, and then I created circle shapes in the storyboard using UIButtons. When user taps one of these buttons, "performSegue" method is triggered and changes current view with passing chosen button's data. 
+In the Result View Controller, app also chooses it's button randomly. I used Swift "scheduledTimer" functionality in order app to work more natural. 
+When user wins, result is saved into "UserDefaults" in order to keep percictancy of data.  
+

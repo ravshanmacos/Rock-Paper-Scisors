@@ -15,12 +15,6 @@ struct DesignsModule{
         el.layer.borderWidth = CGFloat(borderWidth)
         el.layer.borderColor = UIColor.white.cgColor
     }
-
-    func makeCirle(from view:UIView,color:String){
-        view.layer.cornerRadius = 60;
-        view.layer.borderWidth = 15;
-        view.layer.borderColor = UIColor(named: color)?.cgColor
-    }
     
     func setChosen(_ meButton:UIButton,_ chosen:String){
         switch chosen{
